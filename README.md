@@ -1,1 +1,3 @@
-# python-shell-reverse
+# Shell reverse em Python
+
+Está shell é escrita claramente em Python, usei as bibliotecas `os`, `psutil` e `socket`, tal shell ainda etá sendo construida ainda...
