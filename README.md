@@ -5,7 +5,7 @@ Essa é uma shell reversa criada em Python, nela é possível executar apenas al
   <img src='image2.png' height='150'>
 </div>
 
-## Como executar e utilizar
+## Instalando o necessário
 
 Aqui está um passo a passo do que deve ser feito para utilizar a Shell Reversa da melhor maneira possível.
 
@@ -22,3 +22,20 @@ pip install psutil
 
 > [!IMPORTANT]
 > Caso algo de erro é sugerido que ***revise a versão do Python instalada, pois essa precisa ser superior ou igual a 3.9.***
+
+## Configurando
+Caso queira mudar a porta que será aberta na máquina servidora isso é possível, basta entrar no arquivo [main.py](./main.py) e alterar a linha **102** para a porta desejada,
+como é esboçado no código abaixo:
+```py
+HOST = PORTA DESEJADA
+```
+
+## Executando
+### Como funciona?
+A máquina que vai rodar a Shell, que no caso será a servidora deverá executar o arquivo [main.py](./main.py), logo em seguida a máquina client deve executar o arquivo [client.py](./client.py) com os seguintes parametros:
+
+```bash
+python client.py -i IP DA MAQUINA SERVIDORA -p PORTA DA APLICAÇÃO
+```
+
+Assim estará pronto para uso.
